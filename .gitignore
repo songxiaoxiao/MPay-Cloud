@@ -9,6 +9,7 @@ build/
 /build
 mpay-*/build/*
 mpay-*/.gradle/*
+mpay-*/out/*
 
 
 .DS_Store

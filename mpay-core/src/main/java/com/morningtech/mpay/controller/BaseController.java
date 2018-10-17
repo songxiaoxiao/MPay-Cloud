@@ -15,6 +15,7 @@ public class BaseController {
 
     @RequestMapping("/")
     String home(){
+
         return "Hello world!";
     }
 
