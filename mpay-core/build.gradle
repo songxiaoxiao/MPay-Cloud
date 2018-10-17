@@ -1,0 +1,29 @@
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Apply the application plugin to add support for building an application
+    id 'application'
+}
+
+group 'com.morningtech.mpay'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+
+// Define the main class for the application
+mainClassName = 'com.morningtech.mpay.App'
+
+dependencies {
+    // This dependency is found on compile classpath of this component and consumers.
+//    compile 'com.google.guava:guava:23.0'
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}

@@ -6,6 +6,12 @@ logs/
 */target/*
 .gradle/
 build/
+/build
+mpay-*/build/*
+mpay-*/.gradle/*
+
+
+.DS_Store
 
 # Log file
 *.log
