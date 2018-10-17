@@ -4,6 +4,7 @@
 logs/
 *.iml
 */target/*
+.gradle/
 
 # Log file
 *.log
