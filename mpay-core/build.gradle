@@ -8,6 +8,7 @@ plugins {
 
 group 'com.morningtech.mpay'
 version '1.0-SNAPSHOT'
+description = 'mpay-core'
 
 sourceCompatibility = 1.8
 
@@ -19,6 +20,10 @@ repositories {
 jar {
     baseName = 'mpay-core'
     version =  '1.0-SNAPSHOT'
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '4.10.2'
 }
 
 
