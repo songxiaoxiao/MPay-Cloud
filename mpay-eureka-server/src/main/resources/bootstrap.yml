@@ -1,0 +1,26 @@
+server:
+  port: 9988
+  application:
+    name: mpay-eureka-server
+
+eureka:
+  instance:
+    hostname: 0.0.0.0
+    #指定续约更新频率，默认是 30s
+    lease-renewal-interval-in-seconds: 15
+#    data-center-info: dc
+#    environment: cloud-HA
+  server:
+    #自我保护开关
+    enableSelfPreservation: true
+    #节点清理间隔(单位毫秒，默认是60*1000）
+    eviction-interval-timer-in-ms: 1000
+
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

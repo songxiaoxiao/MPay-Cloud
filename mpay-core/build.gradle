@@ -1,7 +1,7 @@
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
-
+    id 'org.springframework.boot' version '2.0.6.RELEASE'
     // Apply the application plugin to add support for building an application
     id 'application'
 }
@@ -13,6 +13,12 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
+}
+
+jar {
+    baseName = 'mpay-core'
+    version =  '1.0-SNAPSHOT'
 }
 
 
@@ -22,8 +28,8 @@ mainClassName = 'com.morningtech.mpay.App'
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-//    compile 'com.google.guava:guava:23.0'
-
+    compile("org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }

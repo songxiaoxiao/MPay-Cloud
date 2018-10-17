@@ -6,9 +6,12 @@
  * user guide available at https://docs.gradle.org/4.10.2/userguide/tutorial_java_projects.html
  */
 
+
+
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
+    id 'org.springframework.boot' version '2.0.6.RELEASE'
 
     // Apply the application plugin to add support for building an application
     id 'application'
@@ -17,6 +20,8 @@ plugins {
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
 //    compile 'com.google.guava:guava:23.0'
+//    compile("org.springframework.boot:spring-boot-starter-web:${version}")
+//    testCompile("org.springframework.boot:spring-boot-starter-test")
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
@@ -28,4 +33,31 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
 
     jcenter()
+}
+
+allprojects  {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    group = 'com.morningtech.mpay'
+
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+    task wrapper(type: Wrapper){
+        gradleVersion = '4.10.2'
+    }
+
+}
+
+subprojects {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+
+    repositories {
+        mavenLocal()
+        maven { url "http://repo.maven.apache.org/maven2" }
+    }
+
 }
