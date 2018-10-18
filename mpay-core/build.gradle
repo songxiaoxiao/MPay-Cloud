@@ -22,7 +22,7 @@ jar {
     version =  '1.0-SNAPSHOT'
 }
 
-task wrapper(type: Wrapper){
+wrapper{
     gradleVersion = '4.10.2'
 }
 

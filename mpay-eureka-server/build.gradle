@@ -11,6 +11,10 @@ repositories {
     mavenCentral()
 }
 
+wrapper{
+    gradleVersion = '4.10.2'
+}
+
 dependencies {
 //    compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-eureka-server'
     testCompile group: 'junit', name: 'junit', version: '4.12'
