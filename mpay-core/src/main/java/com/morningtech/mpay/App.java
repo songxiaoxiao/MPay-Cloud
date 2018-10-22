@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello world...";
     }
 
 
