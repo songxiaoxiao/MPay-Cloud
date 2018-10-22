@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.morningtech.mpay'
+group 'com.morningtech.mpay.common'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -16,6 +16,9 @@ wrapper{
 }
 
 dependencies {
-//    compile project(':mpay-core')
+    compile("org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+
