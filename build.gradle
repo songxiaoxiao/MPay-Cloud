@@ -58,4 +58,11 @@ subprojects {
         testCompile 'junit:junit:4.12'
     }
 
+    project(':mpay-common') {
+        dependencies {
+            compile project(':mpay-core')
+        }
+    }
+
 }
+

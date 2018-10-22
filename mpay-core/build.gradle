@@ -6,7 +6,7 @@ plugins {
     id 'application'
 }
 
-group 'com.morningtech.mpay'
+group 'com.morningtech.mpay.core'
 version '1.0-SNAPSHOT'
 description = 'mpay-core'
 

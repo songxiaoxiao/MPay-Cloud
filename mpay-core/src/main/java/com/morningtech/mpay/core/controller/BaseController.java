@@ -1,4 +1,4 @@
-package com.morningtech.mpay.controller;
+package com.morningtech.mpay.core.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.morningtech.mpay'
+group 'com.morningtech.mpay.eureka'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
