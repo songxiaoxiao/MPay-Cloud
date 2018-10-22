@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.0.6.RELEASE'
+    id 'application'
 }
 
 group 'com.morningtech.mpay'
@@ -8,6 +10,8 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+    mavenLocal()
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
 }
 
@@ -16,5 +20,11 @@ wrapper{
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // This dependency is found on compile classpath of this component and consumers.
+    compile("org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
+    // Use JUnit test framework
+    testCompile 'net.bytebuddy:byte-buddy:1.7.9'
+    testCompile 'net.bytebuddy:byte-buddy-agent:1.7.9'
+    testCompile 'junit:junit:4.12'
 }
