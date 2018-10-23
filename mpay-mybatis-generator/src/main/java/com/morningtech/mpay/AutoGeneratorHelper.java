@@ -66,6 +66,7 @@ public class AutoGeneratorHelper {
         StrategyConfig strategy = new StrategyConfig();
         //strategy.setTablePrefix(new String[] { "bmd_", "mp_" });// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
+
 //        strategy.setInclude(new String[] { rb.getString("tableName")}); // 需要生成的表
         // 需要生成的表
 //        strategy.setInclude("brands", "brandSearch","categories", "addresses", "alipayModel",
@@ -83,7 +84,7 @@ public class AutoGeneratorHelper {
         PackageConfig pc = new PackageConfig();
         // pc.setModuleName("test");
 //        pc.setParent(rb.getString("parent"));// 自定义包路径
-        pc.setParent("com.morningtech.mpay");// 自定义包路径
+        pc.setParent("com.morningtech.mpay.core");// 自定义包路径
 
         pc.setController("controller.dict");// 这里是控制器包名，默认 web
         pc.setEntity("model.dict");

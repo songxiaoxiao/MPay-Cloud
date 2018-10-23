@@ -38,7 +38,7 @@
             <level>ERROR</level>
         </filter>
     </appender>
-    <logger name="com.morningtech.mpay.dao" level="DEBUG"/>
+    <logger name="com.morningtech.mpay.core.dao" level="DEBUG"/>
     <!-- Level: FATAL 0  ERROR 3  WARN 4  INFO 6  DEBUG 7 -->
     <root level="INFO">
         <appender-ref ref="console" />

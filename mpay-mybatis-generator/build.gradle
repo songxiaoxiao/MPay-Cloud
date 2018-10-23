@@ -4,7 +4,7 @@ plugins {
     id 'application'
 }
 
-group 'com.morningtech.mpay'
+group 'com.morningtech.mpay.mybatis'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

@@ -60,4 +60,11 @@ subprojects {
         testCompile 'net.bytebuddy:byte-buddy-agent:1.7.9'
     }
 
+    project(':mpay-common') {
+        dependencies {
+            compile project(':mpay-core')
+        }
+    }
+
 }
+
