@@ -728,4 +728,18 @@ CREATE TABLE `cryp_currency` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='汇率表';
 
+DROP TABLE IF EXISTS `dict_currency`;
+CREATE TABLE `dict_currency` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lang` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'en-us' COMMENT '语言：en-us:英文 zh-cn:中文',
+  `name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '法币名称',
+  `code` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '法币code',
+  `value` double(15,8) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1正常，2删除',
+  `update_time` datetime DEFAULT NULL,
+  `is_default` tinyint(3) NOT NULL DEFAULT '0' COMMENT '是否常用',
+  `list_order` float unsigned NOT NULL DEFAULT '10000' COMMENT '排序ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='货币字典表';
+
 SET FOREIGN_KEY_CHECKS = 1;
