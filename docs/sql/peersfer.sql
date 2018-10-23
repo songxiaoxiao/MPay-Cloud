@@ -713,4 +713,19 @@ CREATE TABLE `user_wallet_account_log` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=545 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='资产流水日志';
 
+DROP TABLE IF EXISTS `cryp_currency`;
+CREATE TABLE `cryp_currency` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `coin_id` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '数据id',
+  `name` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '数字货币全称',
+  `symbol` varbinary(20) DEFAULT NULL COMMENT '数字货币code',
+  `rank` int(11) DEFAULT NULL COMMENT '级别',
+  `price_usd` decimal(20,6) DEFAULT '0.000000' COMMENT '美元价格',
+  `last_updated` datetime DEFAULT NULL,
+  `price_currency` decimal(20,6) DEFAULT '0.000000' COMMENT '法币价值',
+  `update_time` datetime DEFAULT NULL,
+  `currency` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '法币code',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='汇率表';
+
 SET FOREIGN_KEY_CHECKS = 1;
