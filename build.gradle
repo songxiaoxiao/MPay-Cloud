@@ -32,14 +32,14 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'application'
 
-    plugins {
-        // Apply the java plugin to add support for Java
-        id 'java'
-        id 'org.springframework.boot' version '2.0.6.RELEASE'
-
-        // Apply the application plugin to add support for building an application
-        id 'application'
-    }
+//    plugins {
+//        // Apply the java plugin to add support for Java
+//        id 'java'
+//        id 'org.springframework.boot' version '2.0.6.RELEASE'
+//
+//        // Apply the application plugin to add support for building an application
+//        id 'application'
+//    }
 
     wrapper{
         gradleVersion = '4.10.2'
@@ -56,6 +56,8 @@ subprojects {
         testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
         // Use JUnit test framework
         testCompile 'junit:junit:4.12'
+        testCompile 'net.bytebuddy:byte-buddy:1.7.9'
+        testCompile 'net.bytebuddy:byte-buddy-agent:1.7.9'
     }
 
 }

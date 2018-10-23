@@ -1,5 +1,6 @@
 package com.morningtech.mpay;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 
 @SpringBootApplication
+@MapperScan("com.morningtech.mpay.dao")
 public class App {
     public String getGreeting() {
         return "Hello world.";

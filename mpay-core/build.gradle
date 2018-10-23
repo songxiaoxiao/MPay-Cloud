@@ -13,6 +13,8 @@ description = 'mpay-core'
 sourceCompatibility = 1.8
 
 repositories {
+    mavenLocal()
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
     jcenter()
 }
@@ -25,16 +27,27 @@ jar {
 wrapper{
     gradleVersion = '4.10.2'
 }
-
-
-
 // Define the main class for the application
 mainClassName = 'com.morningtech.mpay.App'
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile("org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE")
     testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
     // Use JUnit test framework
+    testCompile 'net.bytebuddy:byte-buddy:1.7.9'
+    testCompile 'net.bytebuddy:byte-buddy-agent:1.7.9'
     testCompile 'junit:junit:4.12'
+    compile('mysql:mysql-connector-java:5.1.43')
+    compile('com.alibaba:druid:1.1.10')
+    compile('ch.qos.logback:logback-classic:1.2.3')
+    compile('org.slf4j:slf4j-api:1.7.25')
+    compile('org.slf4j:slf4j-log4j12:1.7.25')
+    compile("org.springframework.boot:spring-boot-starter-jdbc:1.5.13.RELEASE")
+    compile('com.baomidou:mybatis-plus:2.3')
+    compile('com.baomidou:mybatis-plus-boot-starter:2.3')
+    compile('org.apache.velocity:velocity:1.7')
+    compile('io.swagger:swagger-annotations:1.5.13')
+    compile('io.springfox:springfox-swagger2:2.9.2')
+    compile('io.springfox:springfox-swagger-ui:2.9.2')
+    compile('com.alibaba:fastjson:1.2.47')
 }

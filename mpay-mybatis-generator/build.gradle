@@ -15,7 +15,7 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
+mainClassName = 'com.morningtech.mpay.AutoGeneratorHelper'
 wrapper{
     gradleVersion = '4.10.2'
 }
@@ -23,7 +23,6 @@ wrapper{
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile("org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE")
-    testCompile("org.springframework.boot:spring-boot-starter-test:2.0.6.RELEASE")
     // Use JUnit test framework
     testCompile 'net.bytebuddy:byte-buddy:1.7.9'
     testCompile 'net.bytebuddy:byte-buddy-agent:1.7.9'

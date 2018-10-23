@@ -9,7 +9,7 @@
 
 rootProject.name = 'MPay-Cloud'
 
-include 'mpay-core','mpay-admin','mpay-common'
+include 'mpay-core','mpay-admin','mpay-common', 'mpay-mybatis-generator'
 
 //project(':mpay-core').projectDir = "$rootDir/mpay-core" as File
 //project(':mpay-admin').projectDir = "$rootDir/mpay-admin" as File
