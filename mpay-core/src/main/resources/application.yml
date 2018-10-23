@@ -9,7 +9,7 @@ spring:
       max-request-size: 100MB
 server:
   servlet:
-    context-path: /mpay
+    context-path: /peersfer
 ---
 #开发环境配置
 server:
@@ -20,9 +20,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/web_admin?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    password: knight1016
-    username: knight
+    url: jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    password: 4ma!0KJrC9%f9NDo
+    username: dev
     druid:
       initialSize: 2
       minIdle: 2

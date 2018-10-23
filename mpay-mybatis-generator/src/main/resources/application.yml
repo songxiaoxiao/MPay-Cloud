@@ -20,12 +20,9 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-#        url: jdbc:mysql://192.168.31.65:3306/beebuy?useUnicode=true&characterEncoding=UTF-8
-#        username: root
-#        password: root
-        url: jdbc:mysql://rm-uf63131p42uqph7r6io.mysql.rds.aliyuncs.com:3306/beebuy_test?useUnicode=true&characterEncoding=UTF-8
-        username: igfdroo
-        password: Qs3JT50WLC@I
+        url: jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8
+        username: dev
+        password: 4ma!0KJrC9%f9NDo
     jackson:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss

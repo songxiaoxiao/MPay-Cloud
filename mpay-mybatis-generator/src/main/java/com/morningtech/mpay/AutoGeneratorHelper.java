@@ -55,9 +55,9 @@ public class AutoGeneratorHelper {
 //        dsc.setPassword("voIehRAVo8syRG2i");
 //        dsc.setUrl("jdbc:mysql://118.31.238.134:3306/beebuy?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false");
 
-        dsc.setUsername("knight");
-        dsc.setPassword("knight1016");
-        dsc.setUrl("jdbc:mysql://localhost:3306/web_admin?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
+        dsc.setUsername("dev");
+        dsc.setPassword("4ma!0KJrC9%f9NDo");
+        dsc.setUrl("jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8&useSSL=false");
 
         mpg.setDataSource(dsc);
 
