@@ -1,0 +1,87 @@
+## Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+#    port: 8082
+#    context-path: /freeter-generator
+
+#eureka:
+#  nstance:
+#    hostname: 192.168.31.65
+#  client:
+#    serviceUrl:
+##      defaultZone: http://192.168.31.65:9988/eureka/
+#      defaultZone: http://localhost:9988/eureka/
+
+# mysql
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://192.168.31.65:3306/beebuy?useUnicode=true&characterEncoding=UTF-8
+#        username: root
+#        password: root
+        url: jdbc:mysql://rm-uf63131p42uqph7r6io.mysql.rds.aliyuncs.com:3306/beebuy_test?useUnicode=true&characterEncoding=UTF-8
+        username: igfdroo
+        password: Qs3JT50WLC@I
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    resources:
+            static-locations: classpath:/static/,classpath:/views/
+
+
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: group.igfd.*.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 3
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #mp2.3+ 全局表前缀 mp_
+    #table-prefix: mp_
+    #刷新mapper 调试神器
+    #refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    # Sequence序列接口实现类配置
+    key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+    #逻辑删除配置（下面3个配置）
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    #自定义填充策略接口实现
+    meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+  configuration:
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+
+
+
+##此处为本项目src所在路径（代码生成器输出路径）
+#OutputDir=/Users/clare/IdeaProjects/igfd/igfd-cloud-project/mybatis-plus-generator/src/main/java
+#OutputDirXml=classpath:/mapper/
+##数据库表名(此处切不可为空，如果为空，则默认读取数据库的所有表名)
+##tableName=beebuy
+##装代码的文件夹名
+#className=empMsg
+##设置作者
+#author=mason
+##正常情况下，下面的代码无需修改！！！！！！！！！！
+##自定义包路径
+#parent=group.igfd
+##数据库地址
+#url=jdbc:mysql://192.168.31.65:3306/beebuy?useUnicode=true&characterEncoding=UTF-8
+#userName=root
+#password=root

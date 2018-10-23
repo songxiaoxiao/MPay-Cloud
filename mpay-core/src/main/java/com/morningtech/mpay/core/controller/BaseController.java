@@ -1,7 +1,11 @@
 package com.morningtech.mpay.core.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @program: MPay-Cloud
@@ -15,8 +19,14 @@ public class BaseController {
 
     @RequestMapping("/")
     String home(){
-
-        return "Hello world!sadf";
+        return "Hello world!";
     }
+
+    @Autowired
+    private HttpServletRequest request;
+
+    @Autowired
+    private HttpServletResponse response;
+
 
 }

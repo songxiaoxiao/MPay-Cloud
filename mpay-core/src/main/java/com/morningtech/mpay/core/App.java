@@ -1,5 +1,6 @@
 package com.morningtech.mpay.core;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,11 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  **/
 
 @SpringBootApplication
+@MapperScan("com.morningtech.mpay.core.dao")
 public class App {
     public String getGreeting() {
         return "Hello world...";
     }
-
 
 
     public static void main(String[] args) {
