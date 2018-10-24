@@ -10,19 +10,26 @@ spring:
 server:
   servlet:
     context-path: /peersfer
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2p0mXI50JMXoaxZTKJ7
 ---
 #开发环境配置
 server:
   port: 9966
+
 
 spring:
   profiles: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    password: 4ma!0KJrC9%f9NDo
-    username: dev
+#    url: jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+#    password: 4ma!0KJrC9%f9NDo
+#    username: dev
+    url: ENC(lnbrOuP/8qf8w0mqXvbWdci5XTTeOQ+35nRkArk7RAwfT07U5NN/NaSaUGfXQ8guAfbLK+JHf21c9MS+sSpDT7c179N1FraeKsfE3hqtQA4CM9TeRD1OmElQr4fhrRN++DTbjeSsiuI7aHwd8lrBVr/GfwFqdYa5BZxFGUxF6J+3WOeZiwL+ZpYPDp2yG59y)
+    password: ENC(D+KA1OBD2MYlIA9LC2vrAO9KWtnbmdm2GdGohH25Vc8=)
+    username: ENC(vYg1IldPEmG3Bt0sl4s8eA==)
     druid:
       initialSize: 2
       minIdle: 2

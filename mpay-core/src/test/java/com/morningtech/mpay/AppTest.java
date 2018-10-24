@@ -4,13 +4,34 @@ package com.morningtech.mpay;
  */
 
 import com.morningtech.mpay.core.App;
+import org.jasypt.encryption.StringEncryptor;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertNotNull;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = App.class)
 public class AppTest {
     @Test public void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Autowired
+    private StringEncryptor encryptor;
+
+    @Test
+    public void getPass(){
+//        String url = "jdbc:mysql://172.18.13.179:3306/peersfer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false";
+//        String username = "dev";
+//        String password = "4ma!0KJrC9%f9NDo";
+//
+//        System.out.println(encryptor.encrypt(url));
+//        System.out.println(encryptor.encrypt(username));
+//        System.out.println(encryptor.encrypt(password));
     }
 }
