@@ -29,7 +29,7 @@ public class AutoGeneratorHelper {
         GlobalConfig gc = new GlobalConfig();
 
 //        gc.setOutputDir(rb.getString("OutputDir"));
-        gc.setOutputDir("/Users/joker/morningtech/projects/MPay-Cloud/mpay-mybatis-generator/src/main/java/");
+        gc.setOutputDir("/Users/winter/work/code/MPay-Cloud/mpay-mybatis-generator/src/main/java/");
 
         gc.setFileOverride(true);
         gc.setActiveRecord(true);// 开启 activeRecord 模式
@@ -74,7 +74,7 @@ public class AutoGeneratorHelper {
 //                "orders", "pictures", "publish_buyers", "publish_customers", "quotes",
 //                "shareds", "sms", "tokens", "user_buyers", "user_customers", "users",
 //                "sys_permission","sys_role","sys_role_perm","sys_secret","sys_user","sys_user_role","subject");
-        strategy.setInclude("p_dict_country");
+        strategy.setInclude("dict_country");
 
         //strategy.setSuperServiceImplClass("com.baomidou.springwind.service.support.BaseServiceImpl");
         mpg.setStrategy(strategy);
